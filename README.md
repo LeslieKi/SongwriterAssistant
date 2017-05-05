@@ -7,7 +7,7 @@ Features currently working:
   - Recording short sound clips
   - Adding venues you've played at
   - Google Maps API
-    - Geocoding for addresses that you've played it. Displays markers on map
+    - Geocoding for addresses that you've played at. Displays markers on map
 Features to implement:
   - Rating venues
   - Adding recordings to database
