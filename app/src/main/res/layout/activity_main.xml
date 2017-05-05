@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#28333333">
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/bottom_container"
+        android:layout_marginTop = "5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Main Menu"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+
+            <Button
+                android:text="Chord Library"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chordLibraryBtn"
+                android:onClick="openChordLibrary"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"
+                android:textSize="24sp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:text="Documents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/documentsBtn"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"
+                android:textSize="24sp"
+                android:textAllCaps="false"
+                android:onClick="openDocuments"/>
+
+            <Button
+                android:text="Recordings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recordingsBtn"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"
+                android:textSize="24sp"
+                android:textAllCaps="false"
+                android:onClick="openRecordings"/>
+
+            <Button
+                android:text="Locations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/locationsBtn"
+                android:onClick="openLocations"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"
+                android:textSize="24sp"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
