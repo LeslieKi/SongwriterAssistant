@@ -84,7 +84,7 @@ public class DBLocationsHelper extends SQLiteOpenHelper {
         contentValues.put("state", state);
         contentValues.put("zipcode", zip);
 
-        db.update("notes", contentValues, "id = ? ", new String[] { Integer.toString(id) } );
+        db.update("locations", contentValues, "id = ? ", new String[] { Integer.toString(id) } );
         return true;
     }
 
