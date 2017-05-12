@@ -32,13 +32,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     int count = 0;
 
-
-
     private DBLocationsHelper mydb;
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +43,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-
     }
 
     private class GetCoordinates extends AsyncTask<String, Void, String> {
@@ -126,7 +118,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(cameraDefault));
 
-
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
         }
 
@@ -135,17 +126,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mydb = new DBLocationsHelper(this);
         ArrayList locations = mydb.getAllGeoAddresses();
 
-
-
         for(int i = 0; i < locations.size(); i++) {
             Log.d("Tracer", "In class: MapsActivity In Method: onCreate for loop");
             Log.d("Address", "Address: "+locations.get(i));
             String addressToGeocode = ""+locations.get(i);
             new GetCoordinates().execute(addressToGeocode);
         }
-
-
-
-
     }
 }
